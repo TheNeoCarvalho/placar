@@ -1,0 +1,84 @@
+.section-full {
+  min-height: 100vh;
+}
+
+.btn-lg {
+  margin-top: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-10 {
+  margin-top: 10px;
+}
+
+.mb-20 {
+  margin-top: 20px;
+}
+
+.mb-30 {
+  margin-top: 30px;
+}
+
+.p30 {
+  padding: 30px;
+}
+
+.box {
+  width: 100%;
+  padding: 20px;
+}
+#labelJodador1,
+#labelJodador2 {
+  font: 42px Arial;
+}
+
+.play {
+  border: 1px solid #000;
+}
+
+#pontuacaoP1,
+#pontuacaoP2 {
+  font: 64px Arial;
+}
+
+.row {
+  padding: 10px;
+}
+
+.linha {
+  background-color: yellow;
+  margin: 10px 10px;
+  border: 1px solid #000;
+}
+
+.linha2 {
+  background-color: #ccc;
+  margin: 10px 10px;
+  border: 1px solid #eee;
+}
+
+.balls {
+  width: 45px;
+  height: 45px;
+  border: 0;
+  border-radius: 50%;
+  font: 18px Arial;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.clicked {
+  background-color: #000;
+  color: #fff;
+}

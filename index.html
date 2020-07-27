@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Placar</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row text-center mt-30 linha">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6 play" id="labelJodador1">Jogador Um</div>
+            <div class="col-md-6 play" id="labelJodador2">Jogador Dois</div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 play" id="pontuacaoP1">0</div>
+            <div class="col-md-6 play" id="pontuacaoP2">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row text-center mt-30 linha2">
+        <div class="col-md-12">
+          <h1>Painel</h1>
+          <div class="row">
+            <div class="col-md-6" id="jodador">
+              <div class="form-group">
+                <label for="jogador1">Jogador Um</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jogador1"
+                  placeholder="Nome do Jogador 1"
+                />
+              </div>
+            </div>
+            <div class="col-md-6" id="jodador">
+              <div class="form-group">
+                <label for="jogador2">Jogador Dois</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jogador2"
+                  placeholder="Nome do Jogador 2"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6" id="pontuacao">
+              <button
+                onClick="pontuacaoUm('p11')"
+                class="balls"
+                id="btnJogador1_1"
+                style="background-color: red;"
+              >
+                1
+              </button>
+              <button
+                onClick="pontuacaoUm('p12')"
+                class="balls"
+                id="btnJogador1_2"
+                style="background-color: rgb(238, 255, 4);"
+              >
+                2
+              </button>
+              <button
+                onClick="pontuacaoUm('p13')"
+                class="balls"
+                id="btnJogador1_3"
+                style="background-color: rgb(9, 53, 0);"
+              >
+                3
+              </button>
+              <button
+                onClick="pontuacaoUm('p14')"
+                class="balls"
+                id="btnJogador1_4"
+                style="background-color: rgb(51, 42, 4);"
+              >
+                4
+              </button>
+              <button
+                onClick="pontuacaoUm('p15')"
+                class="balls"
+                id="btnJogador1_5"
+                style="background-color: rgb(0, 27, 148);"
+              >
+                5
+              </button>
+              <button
+                onClick="pontuacaoUm('p16')"
+                class="balls"
+                id="btnJogador1_6"
+                style="background-color: rgb(219, 17, 192);"
+              >
+                6
+              </button>
+              <button
+                onClick="pontuacaoUm('p17')"
+                class="balls"
+                id="btnJogador1_7"
+                style="background-color: rgb(0, 0, 0);"
+              >
+                7
+              </button>
+            </div>
+            <div class="col-md-6" id="pontuacao">
+              <button
+                onClick="pontuacaoDois('p21')"
+                class="balls"
+                id="btnJogador2_1"
+                style="background-color: red;"
+              >
+                1
+              </button>
+              <button
+                onClick="pontuacaoDois('p22')"
+                class="balls"
+                id="btnJogador2_2"
+                style="background-color: rgb(238, 255, 4);"
+              >
+                2
+              </button>
+              <button
+                onClick="pontuacaoDois('p23')"
+                class="balls"
+                id="btnJogador2_3"
+                style="background-color: rgb(9, 53, 0);"
+              >
+                3
+              </button>
+              <button
+                onClick="pontuacaoDois('p24')"
+                class="balls"
+                style="background-color: rgb(51, 42, 4);"
+                id="btnJogador2_4"
+              >
+                4
+              </button>
+              <button
+                onClick="pontuacaoDois('p25')"
+                class="balls"
+                style="background-color: rgb(0, 27, 148);"
+                id="btnJogador2_5"
+              >
+                5
+              </button>
+              <button
+                onClick="pontuacaoDois('p26')"
+                class="balls"
+                id="btnJogador2_6"
+                style="background-color: rgb(219, 17, 192);"
+              >
+                6
+              </button>
+              <button
+                onClick="pontuacaoDois('p27')"
+                class="balls"
+                id="btnJogador2_7"
+                style="background-color: rgb(0, 0, 0);"
+              >
+                7
+              </button>
+            </div>
+          </div>
+          <div class="box">
+            <button class="btn btn-default" onclick="zerar()">
+              Zerar Placar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Placar JavaScript -->
+    <script src="./js/placar.js"></script>
+  </body>
+</html>
