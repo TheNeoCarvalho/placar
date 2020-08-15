@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Champ;
+  src: url('../fonts/Champions-Bold.ttf');
+}
+
+body {
+  font-family: Champ;
+}
+
 .section-full {
   min-height: 100vh;
 }
@@ -40,7 +49,7 @@
 }
 #labelJodador1,
 #labelJodador2 {
-  font: 42px Arial;
+  font: 42px Champ;
 }
 
 .play {
@@ -49,7 +58,7 @@
 
 #pontuacaoP1,
 #pontuacaoP2 {
-  font: 64px Arial;
+  font: 64px Champ;
 }
 
 .row {

@@ -59,22 +59,6 @@
 var pontos1 = 0;
 var pontos2 = 0;
 
-var statusb11 = false;
-var statusb12 = false;
-var statusb13 = false;
-var statusb14 = false;
-var statusb15 = false;
-var statusb16 = false;
-var statusb17 = false;
-
-var statusb21 = false;
-var statusb22 = false;
-var statusb23 = false;
-var statusb24 = false;
-var statusb25 = false;
-var statusb26 = false;
-var statusb27 = false;
-
 var nomePlayer1 = document.querySelector("#jogador1");
 var nomePlayer2 = document.querySelector("#jogador2");
 
@@ -90,66 +74,90 @@ nomePlayer2.addEventListener("keyup", function () {
 
 var botoes = document.querySelectorAll(".balls");
 
-function pontuacaoUm(pontuacao) {
-  if (pontuacao === "p11") {
-    pontos1 += 1;
+function AddPoint(p, pontuacao) {
+  if(p == "p2"){
+    pontos2 += pontuacao;
+    document.querySelector("#pontuacaoP2").innerHTML = pontos2;
+  }else{
+    pontos1 += pontuacao;
+    document.querySelector("#pontuacaoP1").innerHTML = pontos1;
   }
-
-  if (pontuacao === "p12") {
-    pontos1 += 2;
+}
+function SubPoint(p, pontuacao) {
+  if(p == "p2"){
+    if(pontos2 > 0){
+      pontos2 -= pontuacao;
+      document.querySelector("#pontuacaoP2").innerHTML = pontos2;
+    }
+  }else{
+    if(pontos1 > 0){
+      pontos1 -= pontuacao;
+      document.querySelector("#pontuacaoP1").innerHTML = pontos1;
+    }
   }
-
-  if (pontuacao === "p13") {
-    pontos1 += 3;
-  }
-
-  if (pontuacao === "p14") {
-    pontos1 += 4;
-  }
-  if (pontuacao === "p15") {
-    pontos1 += 5;
-  }
-  if (pontuacao === "p16") {
-    pontos1 += 6;
-  }
-
-  if (pontuacao === "p17") {
-    pontos1 += 7;
-  }
-
-  document.querySelector("#pontuacaoP1").innerHTML = pontos1;
 }
 
-function pontuacaoDois(pontuacao) {
-  if (pontuacao === "p21") {
-    pontos2 += 1;
-  }
 
-  if (pontuacao === "p22") {
-    pontos2 += 2;
-  }
+// function pontuacaoUm(pontuacao) {
+//   if (pontuacao === "p11") {
+//     pontos1 += 1;
+//   }
 
-  if (pontuacao === "p23") {
-    pontos2 += 3;
-  }
+//   if (pontuacao === "p12") {
+//     pontos1 += 2;
+//   }
 
-  if (pontuacao === "p24") {
-    pontos2 += 4;
-  }
-  if (pontuacao === "p25") {
-    pontos2 += 5;
-  }
-  if (pontuacao === "p26") {
-    pontos2 += 6;
-  }
+//   if (pontuacao === "p13") {
+//     pontos1 += 3;
+//   }
 
-  if (pontuacao === "p27") {
-    pontos2 += 7;
-  }
+//   if (pontuacao === "p14") {
+//     pontos1 += 4;
+//   }
+//   if (pontuacao === "p15") {
+//     pontos1 += 5;
+//   }
+//   if (pontuacao === "p16") {
+//     pontos1 += 6;
+//   }
 
-  document.querySelector("#pontuacaoP1").innerHTML = pontos1;
-  document.querySelector("#pontuacaoP2").innerHTML = pontos2;
-}
+//   if (pontuacao === "p17") {
+//     pontos1 += 7;
+//   }
+
+//   document.querySelector("#pontuacaoP1").innerHTML = pontos1;
+// }
+
+// function pontuacaoDois(pontuacao) {
+//   if (pontuacao === "p21") {
+//     pontos2 += 1;
+//   }
+
+//   if (pontuacao === "p22") {
+//     pontos2 += 2;
+//   }
+
+//   if (pontuacao === "p23") {
+//     pontos2 += 3;
+//   }
+
+//   if (pontuacao === "p24") {
+//     pontos2 += 4;
+//   }
+//   if (pontuacao === "p25") {
+//     pontos2 += 5;
+//   }
+//   if (pontuacao === "p26") {
+//     pontos2 += 6;
+//   }
+
+//   if (pontuacao === "p27") {
+//     pontos2 += 7;
+//   }
+
+//   document.querySelector("#pontuacaoP1").innerHTML = pontos1;
+//   document.querySelector("#pontuacaoP2").innerHTML = pontos2;
+// }
 
 function zerar() {
   pontos1 = 0;
