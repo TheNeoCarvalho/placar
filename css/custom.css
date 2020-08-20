@@ -1,10 +1,11 @@
 @font-face {
   font-family: Champ;
-  src: url('../fonts/Champions-Bold.ttf');
+  src: url("../fonts/Champions-Bold.ttf");
 }
 
 body {
   font-family: Champ;
+  color: #000;
 }
 
 .section-full {
