@@ -82,6 +82,8 @@ function AddPoint(p, pontuacao) {
     pontos1 += pontuacao;
     document.querySelector("#pontuacaoP1").innerHTML = pontos1;
   }
+  Diferenca();
+
 }
 function SubPoint(p, pontuacao) {
   if(p == "p2"){
@@ -95,6 +97,12 @@ function SubPoint(p, pontuacao) {
       document.querySelector("#pontuacaoP1").innerHTML = pontos1;
     }
   }
+  Diferenca();
+}
+
+function Diferenca(){
+  var subs = document.getElementById('subs');
+  subs.innerHTML = Math.abs(pontos1 - pontos2);
 }
 
 
@@ -165,4 +173,8 @@ function zerar() {
 
   document.querySelector("#pontuacaoP1").innerHTML = pontos1;
   document.querySelector("#pontuacaoP2").innerHTML = pontos2;
+
+  var subs = document.getElementById('subs');
+  subs.innerHTML = 0
+  
 }
